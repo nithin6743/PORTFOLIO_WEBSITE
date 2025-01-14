@@ -9,7 +9,7 @@
 body{
     min-height: 100vh;
     background-color: black;
-    font-family: JetBrains Mono;
+    font-family: JetBrains Mono, Arial, Helvetica, sans-serif;
 }
 
 img{
