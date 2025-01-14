@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITHIN KUMAR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="menu">
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#" class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#" >HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">PROJECTS</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>  
+        <ul class="navlinks">
+            <li><img class="logo" src="./images/NK.png"></li>
+            <li class="hideOnMobile"><a href="#" >HOME</a></li>
+            <li class="hideOnMobile"><a href="#">ABOUT</a></li>
+            <li class="hideOnMobile"><a href="#">PROJECTS</a></li>
+            <li class="hideOnMobile"><a href="#">CONTACT</a></li>
+            <li class="menuicon" onclick= showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#09b1ac "><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>   
+    </nav> 
+
+
+
+    <script >
+        function showSidebar(){
+            const sidebar= document.querySelector(".sidebar");
+            sidebar.style.display='flex';
+        }
+        function hideSidebar(){
+            const sidebar= document.querySelector(".sidebar");
+            sidebar.style.display='none';
+        }
+    </script>
+</body>
+</html>
