@@ -2,23 +2,30 @@
     dim blue var: #09b1abcd
     black colour:#000*/
 *{
+    /* removing margins and padding */
     margin:0;
     padding: 0;
+    scroll-behavior: smooth;
+    font-family: JetBrains Mono, Arial, Helvetica, sans-serif;
 }
 
 body{
     min-height: 100vh;
     background-color: black;
-    font-family: JetBrains Mono, Arial, Helvetica, sans-serif;
 }
 
 img{
-    margin: 5px 9px;
+    margin: 5px 25px;
     height: 45px;
 }
 
 nav{
     background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
 }
 nav ul{
     width: 100%;
@@ -40,8 +47,15 @@ nav a{
     color: white;
     font-weight: bold;
 }
+
+nav a:active{
+    color: #09b1ac;
+    transition: 0.3s;
+}
+
 nav a:hover{
     color: #09b1ac;
+    transition: 0.3s;
 }
 
 nav a::after{
@@ -71,6 +85,7 @@ nav li:first-child{
     width: 250px;
     z-index: 999;
     background-color: rgba(255, 255, 255, 0.108);
+    color: white;
     backdrop-filter: blur(10px);
     display: none;
     flex-direction: column;
@@ -90,6 +105,24 @@ nav li:first-child{
     display: none;
 }
 
+
+nav svg {
+    transition: fill 0.3s ease;
+}
+
+nav svg:hover {
+    fill: #09b1ac;
+}
+
+
+section{
+    color: white;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
 @media(max-width:800px){
     .hideOnMobile{
         display: none;
@@ -102,4 +135,13 @@ nav li:first-child{
     .sidebar{
         width: 100%;
     }
+}
+
+
+
+
+
+
+section{
+    font-size: 100px;
 }
