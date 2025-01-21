@@ -116,6 +116,7 @@ nav li:first-child{
 }
 
 .menuicon{
+    margin: 10px 20px;
     display: none;
 }
 
