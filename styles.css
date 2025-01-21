@@ -137,6 +137,7 @@ section{
     align-items: center;
 }
 
+
 @media(max-width:800px){
     .hideOnMobile{
         display: none;
@@ -150,6 +151,8 @@ section{
         width: 100%;
     }
 }
+
+
 
 
 
