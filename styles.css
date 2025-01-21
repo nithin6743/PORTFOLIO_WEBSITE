@@ -116,7 +116,6 @@ nav li:first-child{
 }
 
 .menuicon{
-    margin: 10px 20px;
     display: none;
 }
 
@@ -145,6 +144,9 @@ section{
     }
     .menuicon{
         display: block;
+        align-items: center;
+        margin-top: 15px;
+        margin-right: 20px;
     }
 }
 @media(max-width:450px){
