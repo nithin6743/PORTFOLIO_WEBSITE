@@ -22,6 +22,10 @@ body{
     height: 45px;
 }
 
+header nav ul li a{
+    font-size: 30px;
+}
+
 nav{
     background-color: black;
     position: fixed;
