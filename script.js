@@ -1,43 +1,33 @@
-// Smooth scrolling and highlighting navigation links on scroll
+//to scroll to sections and highlight the section name on navbar
 let sections = document.querySelectorAll("section");
-let navlinks = document.querySelectorAll("header nav ul li a");
+let navLinks = document.querySelectorAll("header nav ul a");
 
 window.onscroll = () => {
-    let scrollPosition = window.scrollY;
+    let top = window.scrollY;
 
     sections.forEach(sec => {
         let offset = sec.offsetTop - 150;
         let height = sec.offsetHeight;
         let id = sec.getAttribute("id");
 
-        if (scrollPosition >= offset && scrollPosition < offset + height) {
-            navlinks.forEach(links => {
-                links.classList.remove("active");
-                if (links.getAttribute("href").includes(id)) {
-                    links.classList.add("active");
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if(link.getAttribute("href").includes(id)){
+                    link.classList.add("active");
                 }
             });
         }
     });
 };
 
-// Show the sidebar
-function showSidebar(event) {
-    if (event) event.preventDefault(); // Prevent default behavior for links
+// to show sidebar
+function ShowSideBar() {
     const sidebar = document.querySelector(".sidebar");
-    sidebar.style.display = "flex"; // Show the sidebar
+    sidebar.style.display = "flex";
 }
-
-// Hide the sidebar
-function hideSidebar() {
+// to hide sidebar
+function hideSideBar(){
     const sidebar = document.querySelector(".sidebar");
-    sidebar.style.display = "none"; // Hide the sidebar
+    sidebar.style.display = "none";
 }
-
-// Close sidebar when clicking on any sidebar link
-const sidebarLinks = document.querySelectorAll(".sidebar a");
-sidebarLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        hideSidebar(); // Hide the sidebar
-    });
-});
