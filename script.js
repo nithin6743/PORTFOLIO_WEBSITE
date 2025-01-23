@@ -23,11 +23,13 @@ window.onscroll = () => {
 
 // to show sidebar
 function ShowSideBar() {
+    event.preventDefault();
     const sidebar = document.querySelector(".sidebar");
     sidebar.style.display = "flex";
 }
 // to hide sidebar
 function hideSideBar(){
+    event.preventDefault();
     const sidebar = document.querySelector(".sidebar");
     sidebar.style.display = "none";
 }
