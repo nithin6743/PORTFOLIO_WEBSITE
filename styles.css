@@ -33,6 +33,7 @@ header{
 .logo{
     height: 40px;
     color: white;
+    margin: 7px 0;
 }
 /*---------nav bar----------*/
 nav ul a{
