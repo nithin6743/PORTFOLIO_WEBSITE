@@ -54,7 +54,7 @@ nav ul a::after {
   width: 0;
   height: 5px;
   background-color: #fca311;
-  transition: width 0.4s ease-in-out;
+  transition: width 0.3s ease;
   transform: translateX(-50%);
 }
 nav ul a:hover::after,
