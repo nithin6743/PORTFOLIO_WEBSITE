@@ -1,122 +1,117 @@
 /*  blue colour:#09b1ac
     dim blue var: #09b1abcd
-    black colour:#000*/
+    black colour:#000
+    Princeton Orange: #FCA311*/
+
 /* Colors and Fonts */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 /*----------removing default styles----------*/
 * {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    font-family: "JetBrains Mono", "EB Garamond", "Roboto", serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "EB Garamond", "Roboto", serif;
 }
-
-body{
-    min-height: 100vh;
+body {
+  min-height: 100vh;
+  background-color: black;
 }
-
 /*----------NAVBAR STYLING---------- */
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 5px 50px;
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 50px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
 /*---------logo image----------*/
-.logo{
-    height: 40px;
-    color: white;
-    margin: 7px 0;
+.logo {
+  height: 40px;
+  color: white;
+  margin: 7px 0;
 }
 /*---------nav bar----------*/
-nav ul a{
-    position: relative;
-    font-size: 25px;
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 40px;
+nav ul a {
+  position: relative;
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
 }
 /*---------navbar hover effect and active effect----------*/
-nav ul a::after{
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 0;
-    height: 5px;
-    background-color: #09b1ac;
-    transition: all 0.5s ease;
+nav ul a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 5px;
+  background-color: #fca311;
+  transition: width 0.4s ease-in-out;
+  transform: translateX(-50%);
 }
-
 nav ul a:hover::after,
-nav ul a.active::after{
-    width: 100%;
-    color: #09b1ac;
+nav ul a.active::after {
+  width: 100%;
+  color: #fca311;
 }
 nav ul a:hover,
-nav ul a.active{
-    color: #09b1ac;
+nav ul a.active {
+  color: #fca311;
 }
-
 /* ----------SECTIONS STYLING---------- */
-section{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
 
-    color: white;
-    font-size: 70px;
+  color: white;
+  font-size: 70px;
 }
-
 /*----------sidebar styling----------*/
-.sidebar{
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    z-index: 999;
-    background-color: rgba(255, 255, 255, 0.777);
-    backdrop-filter: blur(15px);
-    box-shadow: 2px 0 15px white;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.777);
+  backdrop-filter: blur(15px);
+  box-shadow: 2px 0 15px white;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
-
-.sidebar a{
-    width: 100%;
+.sidebar a {
+  width: 100%;
 }
-
-.menu-button{
-    display: none;
+.menu-button {
+  display: none;
 }
-
 /* ----------responsive styling for navbar----------*/
 /*----------for tabs----------*/
-@media(max-width: 800px){
-     .hideOnMobile{
-        display: none;
-     }
-     .menu-button{
-        display: block;
-    }
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
 }
 /*-----------for mobiles----------*/
-@media(max-width: 400px){
-    .sidebar{
-       width: 100%;
-    }
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
 }
-
