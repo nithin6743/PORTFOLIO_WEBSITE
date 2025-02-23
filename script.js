@@ -100,18 +100,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  setTimeout(() => {
-      const video = document.getElementById("backgroundVideo"); // Get the video element
-      const source = document.createElement("source"); // Create a new <source> element
-      source.src = "./images/background-video.mp4"; // Set the video file path
-      source.type = "video/mp4"; // Define the video format
-      video.appendChild(source); // Add <source> inside <video>
-      video.load(); // Load the video after adding the source
-  }, 2000); // Delay execution by 2 seconds (2000ms)
-});
