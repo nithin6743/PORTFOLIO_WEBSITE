@@ -1,52 +1,249 @@
-/*  blue colour:#09b1ac
-    dim blue var: #09b1abcd
-    black colour:#000
-    Princeton Orange: #FCA311*/
+  /*  blue colour:#09b1ac
+      dim blue var: #09b1abcd
+      black colour:#000
+      Princeton Orange: #FCA311*/
 
-/* Colors and Fonts */
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-/*----------removing default styles----------*/
-* {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  box-sizing: border-box;
-  font-family: "EB Garamond", "Roboto", serif;
+  /* Colors and Fonts */
+  @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+  /*----------removing default styles----------*/
+  * {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: "EB Garamond", "Roboto", serif;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: black;
+  }
+
+  #backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+
+  /*----------NAVBAR STYLING---------- */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 50px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0);
+    text-shadow: 0px 0px 20px #000;
+  }
+
+
+  /*---------logo image----------*/
+  .logo {
+    height: 40px;
+    color: white;
+    margin: 7px 0;
+  }
+
+
+  /*---------nav bar----------*/
+  nav ul a {
+    position: relative;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 40px;
+  }
+
+
+  /*---------navbar hover effect and active effect----------*/
+  nav ul a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 5px;
+    background-color: #fca311;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  nav ul a:hover::after,
+  nav ul a.active::after {
+    width: 100%;
+    color: #fca311;
+  }
+
+  nav ul a:hover,
+  nav ul a.active {
+    color: #fca311;
+  }
+
+
+  /* ----------SECTIONS STYLING---------- */
+  section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 5vh;
+    opacity: 1;
+    transition: opacity 0.5s ease, filter 0.5s ease;
+  }
+
+  section.faded {
+    opacity: 0.3;  
+    filter: blur(3px);
+  }
+
+  section.active {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+
+  /*----------sidebar styling----------*/
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.777);
+    backdrop-filter: blur(15px);
+    box-shadow: 2px 0 15px white;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .sidebar a {
+    width: 100%;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+
+  /*----------Home section styling----------*/
+  .aboutNithin{
+    font-size: 2rem;
+    font-weight: 700;
+    height: auto;
+    width:100%;
+    text-shadow: 0px 0px 20px #000, 0px 0px 20px #000;
+  }
+
+  .profileDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3vh;
+    padding-right: 1vh;
+    padding-bottom: 1vh;
+    border-radius: 2vh;
+    text-shadow: 0px 0px 20px #000, 0px 0px 20px #000;
+  }
+
+  .homeSection{
+    display: flex;
+    margin: 10vh;
+    padding: 5vh;
+    border-radius: 2vh;
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  .nithinKumar{
+    text-transform: uppercase;
+    font-size: 4rem;
+    padding-bottom: 2vh;
+  }
+
+  .profile{
+    width: 40%;
+    height: 60vh;
+    justify-content: left;
+    margin: 2vh;
+    border-radius: 2vh;
+    object-fit: cover;
+  }
+
+  .name{
+    color: #FCA311;
+  }
+
+  .namePrefix{
+    font-size: 3rem;
+    text-transform: none;
+  }
+
+  .icons{
+    padding: 2vh 0 0 0;
+    display: flex; 
+    justify-content: center;
+    text-align: center;
+    text-shadow: 0px 0px 20px #000, 0px 0px 20px #000;
+    font-size: 2rem;
+    gap: 1rem;
+  }
+
+  .github{
+    height: 50px;
+  }
+  
+  .resumeLogo{
+    color: #fff;
+    height: 48px;
+  }
+  
+
+/*----------About section styling----------*/
+#ABOUT{
+  display: flex;
 }
-body {
-  min-height: 100vh;
-  background-color: black;
+
+.tabContainer{
+  height: 80vh;
+  width: 90%;
+  background: rgba(0, 0, 0, 0.99);
+  margin: 15vh 10vh;
+  padding: 2vh 2vh 40vh 2vh;
 }
-/*----------NAVBAR STYLING---------- */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 5px 50px;
-  background-color: black;
+
+.tabs{
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  z-index: 100;
 }
-/*---------logo image----------*/
-.logo {
-  height: 40px;
-  color: white;
-  margin: 7px 0;
-}
-/*---------nav bar----------*/
-nav ul a {
+
+.tabs button {
   position: relative;
-  font-size: 25px;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  margin-left: 40px;
+  font-size: 3vh;
+  padding: 1vh 22vh;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+  /* text-shadow: 0px 0px 20px #000, 0px 0px 20px #000; */
 }
-/*---------navbar hover effect and active effect----------*/
-nav ul a::after {
+
+.tabs button::after{
   content: "";
   position: absolute;
   bottom: -5px;
@@ -57,61 +254,43 @@ nav ul a::after {
   transition: width 0.3s ease;
   transform: translateX(-50%);
 }
-nav ul a:hover::after,
-nav ul a.active::after {
-  width: 100%;
-  color: #fca311;
-}
-nav ul a:hover,
-nav ul a.active {
-  color: #fca311;
-}
-/* ----------SECTIONS STYLING---------- */
-section {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
 
-  color: white;
-  font-size: 70px;
+
+.tabs button:hover::after,
+.tabs button.active::after {
+  background-color: #FCA311;
+  cursor: pointer;
 }
-/*----------sidebar styling----------*/
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 250px;
-  z-index: 999;
-  background-color: rgba(255, 255, 255, 0.777);
-  backdrop-filter: blur(15px);
-  box-shadow: 2px 0 15px white;
+
+.tabs button:hover,
+.tabs button.active {
+  background-color: #FCA311;
+  cursor: pointer;
+}
+
+.tab-content {
   display: none;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  padding: 1vh 2vh 53vh 2vh;
 }
-.sidebar a {
-  width: 100%;
+
+.tab-content.active {
+  display: block;
 }
-.menu-button {
-  display: none;
-}
-/* ----------responsive styling for navbar----------*/
-/*----------for tabs----------*/
-@media (max-width: 800px) {
-  .hideOnMobile {
-    display: none;
+
+
+  /* ----------responsive styling for navbar----------*/
+  /*----------for tabs----------*/
+  @media (max-width: 800px) {
+    .hideOnMobile {
+      display: none;
+    }
+    .menu-button {
+      display: block;
+    }
   }
-  .menu-button {
-    display: block;
+  /*-----------for mobiles----------*/
+  @media (max-width: 400px) {
+    .sidebar {
+      width: 100%;
+    }
   }
-}
-/*-----------for mobiles----------*/
-@media (max-width: 400px) {
-  .sidebar {
-    width: 100%;
-  }
-}
