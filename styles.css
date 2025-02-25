@@ -1,216 +1,221 @@
-  /*  blue colour:#09b1ac
-      dim blue var: #09b1abcd
-      black colour:#000
-      Princeton Orange: #FCA311*/
+/*  blue colour:#09b1ac
+    dim blue var: #09b1abcd
+    black colour:#000
+    Princeton Orange: #FCA311*/
 
-  /* Colors and Fonts */
-  @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-  /*----------removing default styles----------*/
-  * {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    font-family: "EB Garamond", "Roboto", serif;
-  }
+/* Colors and Fonts */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/*----------removing default styles----------*/
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "EB Garamond", "Roboto", serif;
+}
 
-  body {
-    min-height: 100vh;
-    background-color: black;
-  }
+body {
+  min-height: 100vh;
+  background-color: black;
+}
 
-  #backgroundVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-  }
-
-
-  /*----------NAVBAR STYLING---------- */
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 5px 50px;
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    background: rgba(0, 0, 0, 0);
-    text-shadow: 0px 0px 20px #000;
-  }
+#backgroundVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
 
 
-  /*---------logo image----------*/
-  .logo {
-    height: 40px;
-    color: white;
-    margin: 7px 0;
-  }
+/*----------NAVBAR STYLING---------- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 50px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0);
+  text-shadow: 0px 0px 20px #000;
+}
 
 
-  /*---------nav bar----------*/
-  nav ul a {
-    position: relative;
-    font-size: 25px;
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    margin-left: 40px;
-  }
+/*---------logo image----------*/
+.logo {
+  height: 40px;
+  color: white;
+  margin: 7px 0;
+}
 
 
-  /*---------navbar hover effect and active effect----------*/
-  nav ul a::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    width: 0;
-    height: 5px;
-    background-color: #fca311;
-    transition: width 0.3s ease;
-    transform: translateX(-50%);
-  }
-
-  nav ul a:hover::after,
-  nav ul a.active::after {
-    width: 100%;
-    color: #fca311;
-  }
-
-  nav ul a:hover,
-  nav ul a.active {
-    color: #fca311;
-  }
+/*---------nav bar----------*/
+nav ul a {
+  position: relative;
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 40px;
+}
 
 
-  /* ----------SECTIONS STYLING---------- */
-  section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0);
-    color: white;
-    font-size: 5vh;
-    opacity: 1;
-    transition: opacity 0.5s ease, filter 0.5s ease;
-  }
+/*---------navbar hover effect and active effect----------*/
+nav ul a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 5px;
+  background-color: #fca311;
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+}
 
-  section.faded {
-    opacity: 0.3;  
-    filter: blur(3px);
-  }
+nav ul a:hover::after,
+nav ul a.active::after {
+  width: 100%;
+  color: #fca311;
+}
 
-  section.active {
-    opacity: 1;
-    filter: blur(0);
-  }
-
-
-  /*----------sidebar styling----------*/
-  .sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    z-index: 999;
-    background-color: rgba(255, 255, 255, 0.777);
-    backdrop-filter: blur(15px);
-    box-shadow: 2px 0 15px white;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  
-  .sidebar a {
-    width: 100%;
-  }
-
-  .menu-button {
-    display: none;
-  }
+nav ul a:hover,
+nav ul a.active {
+  color: #fca311;
+}
 
 
-  /*----------Home section styling----------*/
-  .aboutNithin{
-    font-size: 2rem;
-    font-weight: 700;
-    height: auto;
-    width:100%;
-    text-shadow: 0px 0px 20px #000, 0px 0px 20px #000;
-  }
+/* ----------SECTIONS STYLING---------- */
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  font-size: 5vh;
+  opacity: 1;
+  transition: opacity 0.5s ease, filter 0.5s ease;
+}
 
-  .profileDetails{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 3vh;
-    padding-right: 1vh;
-    padding-bottom: 1vh;
-    border-radius: 2vh;
-    text-shadow: 0px 0px 20px #000, 0px 0px 20px #000;
-  }
+section.faded {
+  opacity: 0.3;  
+  filter: blur(3px);
+}
 
-  .homeSection{
-    display: flex;
-    margin: 10vh;
-    padding: 5vh;
-    border-radius: 2vh;
-    background: rgba(0, 0, 0, 0.9);
-  }
+section.active {
+  opacity: 1;
+  filter: blur(0);
+}
 
-  .nithinKumar{
-    text-transform: uppercase;
-    font-size: 4rem;
-    padding-bottom: 2vh;
-  }
 
-  .profile{
-    width: 40%;
-    height: 60vh;
-    justify-content: left;
-    margin: 2vh;
-    border-radius: 2vh;
-    object-fit: cover;
-  }
+/*----------sidebar styling----------*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.777);
+  backdrop-filter: blur(15px);
+  box-shadow: 2px 0 15px white;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
 
-  .name{
-    color: #FCA311;
-  }
+.sidebar a {
+  width: 100%;
+}
 
-  .namePrefix{
-    font-size: 3rem;
-    text-transform: none;
-  }
+.menu-button {
+  display: none;
+}
 
-  .icons{
-    padding: 2vh 0 0 0;
-    display: flex; 
-    justify-content: center;
-    text-align: center;
-    text-shadow: 0px 0px 20px #000, 0px 0px 20px #000;
-    font-size: 2rem;
-    gap: 1rem;
-  }
 
-  .github{
-    height: 50px;
-  }
-  
-  .resumeLogo{
-    color: #fff;
-    height: 48px;
-  }
-  
+/*----------Home section styling----------*/
+.aboutNithin{
+  font-size: 2rem;
+  font-weight: 700;
+  height: auto;
+  width:100%;
+  text-shadow: 0px 0px 20px #000, 0px 0px 20px #000;
+}
+
+.profileDetails{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 3vh;
+  padding-right: 1vh;
+  padding-bottom: 1vh;
+  border-radius: 2vh;
+  text-shadow: 0px 0px 20px #000, 0px 0px 20px #000;
+}
+
+.homeSection{
+  display: flex;
+  margin: 10vh;
+  padding: 5vh;
+  border-radius: 7vh;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.nithinKumar{
+  text-transform: uppercase;
+  font-size: 4rem;
+  padding-bottom: 2vh;
+}
+
+.profile{
+  width: 40%;
+  height: 60vh;
+  justify-content: left;
+  margin: 2vh;
+  border-radius: 2vh;
+  object-fit: cover;
+}
+
+.name{
+  color: #FCA311;
+}
+
+.namePrefix{
+  font-size: 3rem;
+  text-transform: none;
+}
+
+.icons{
+  padding: 2vh 0 0 0;
+  display: flex; 
+  justify-content: center;
+  text-align: center;
+  text-shadow: 0px 0px 20px #000, 0px 0px 20px #000;
+  font-size: 2rem;
+  gap: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.icons a:hover{
+  transform: scale(1.2);
+}
+
+.github{
+  height: 50px;
+}
+
+.resumeLogo{
+  height: 45px;
+  justify-content: baseline;
+}
+
 
 /*----------About section styling----------*/
 #ABOUT{
@@ -220,9 +225,10 @@
 .tabContainer{
   height: 80vh;
   width: 90%;
-  background: rgba(0, 0, 0, 0.99);
+  background: rgba(0, 0, 0, 0.85);
   margin: 15vh 10vh;
   padding: 2vh 2vh 40vh 2vh;
+  border-radius: 3vh;
 }
 
 .tabs{
@@ -232,15 +238,16 @@
 
 .tabs button {
   position: relative;
-  font-size: 3vh;
-  padding: 1vh 22vh;
+  font-size: 3.5vh;
+  padding: 2vh 0;
+  width: 100%;
   border: none;
   outline: none;
   background: transparent;
   color: #fff;
   font-weight: 700;
   transition: all 0.2s ease-in-out;
-  /* text-shadow: 0px 0px 20px #000, 0px 0px 20px #000; */
+  border-radius: 1vh;
 }
 
 .tabs button::after{
@@ -254,7 +261,6 @@
   transition: width 0.3s ease;
   transform: translateX(-50%);
 }
-
 
 .tabs button:hover::after,
 .tabs button.active::after {
@@ -278,19 +284,175 @@
 }
 
 
-  /* ----------responsive styling for navbar----------*/
-  /*----------for tabs----------*/
-  @media (max-width: 800px) {
-    .hideOnMobile {
-      display: none;
-    }
-    .menu-button {
-      display: block;
-    }
+/*----------Projects section styling----------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------Contact section styling----------*/
+.contactSection{
+  display: flex;
+  margin: 10vh;
+  padding: 5vh;
+  border-radius: 3vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  height: 80vh;
+  width: 90%;
+  justify-content: center;
+  text-align: center;
+  gap: 10vh;
+}
+
+.contactInfo,
+.contactForm{
+  display: flex;
+  flex-direction: column;
+  margin: 5vh 3vh;
+}
+
+.contactCV{
+  background-color: #FCA311;
+  color: #fff;
+  border-style: solid;
+  border-width: 1vh;
+  border-color: #fca21100;
+  outline: none;
+  font-size: 4vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5vh 0;
+  border-radius: 2vh;
+  margin: 2vh 1vh;
+}
+
+.contactCV:hover{
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0);
+  border-color: #FCA311;
+  border-width: 1vh;
+  outline: none;
+}
+
+.contactInfo{
+  justify-content: space-between;
+}
+
+.contactInfo h1{
+  color: #FCA311;
+  margin: 1vh;
+}
+
+.contactInfo p{
+  font-size: 3.5vh;
+  margin: 1vh;
+}
+
+.contactInfo .icons{
+  margin: 1vh;
+  transition: all 0.3s ease-in-out;
+}
+
+.contactInfo .icons a:hover{
+  transform: translateY(-5px);
+}
+
+
+.contactForm input,textarea{
+  font-size: 2.5vh;
+  padding: 2vh;
+  width: 100%;
+  margin: 1vh;
+  background: #262626;
+  color: #fff;
+  border: 0;
+  outline: none;
+  border-radius: 1vh;
+}
+
+.contactForm textarea{
+  width: 100%;
+  height: 25vh;
+}
+
+.contactForm button{
+  background-color: #FCA311;
+  color: #fff;
+  border-style: solid;
+  border-width: 1vh;
+  border-color: #fca21100;
+  outline: none;
+  font-size: 4vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0.5vh 7vh;
+  border-radius: 2vh;
+  margin: 2vh 1vh;
+}
+
+.contactForm button:hover{
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0);
+  border-color: #FCA311;
+  border-width: 1vh;
+  outline: none;
+}
+
+
+
+
+
+
+
+/* ----------responsive styling for navbar----------*/
+/*----------for tabs----------*/
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
   }
-  /*-----------for mobiles----------*/
-  @media (max-width: 400px) {
-    .sidebar {
-      width: 100%;
-    }
+  .menu-button {
+    display: block;
   }
+}
+/*-----------for mobiles----------*/
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}

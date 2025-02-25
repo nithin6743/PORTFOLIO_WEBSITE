@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NITHIN KUMAR</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="./images/NK.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
   </head>
   <body>
-    <video autoplay loop muted playsinline id="backgroundVideo" >
-      <source src="./images/output.webm" type="video/mp4">
-  </video>
+    <video autoplay loop muted playsinline id="backgroundVideo">
+      <source src="./images/background-video.webm" type="video/mp4">
+    </video>
     
-
     <header class="header">
       <a href="#HOME"><img src="images/NK.png" alt="images/NK.png" class="logo"/></a>
       <nav class="navbar">
@@ -52,28 +54,16 @@
             </p>
             <div class="icons">
               <a href="#" class="github">
-                <img
-                  src="./images/githubLogo.svg"
-                  alt="GitHub"
-                  class="github"
-                />
+                <img src="./images/githubLogo.svg" alt="GitHub" class="github"/>
               </a>
               <a href="#" class="X">
                 <img src="./images/XLogo.svg" alt="X" class="X" />
               </a>
               <a href="#" class="linkedin">
-                <img
-                  src="./images/linkedinLogo.svg"
-                  alt="LinkedIn"
-                  class="linkedin"
-                />
+                <img src="./images/linkedinLogo.svg" alt="LinkedIn" class="linkedin"/>
               </a>
               <a href="./images/nithinnnnn.pdf" class="resumeLogo" download="Nithin_Kumar_Resume.pdf">
-                <img
-                  src="./images/resumeLogo.svg"
-                  alt="Resume"
-                  class="resumeLogo"
-                />
+                <img src="./images/resumeLogo.svg" alt="Resume" class="resumeLogo"/>
               </a>
             </div>
           </div>
@@ -104,7 +94,40 @@
     </section>
     
       <section id="PROJECTS">PROJECTS</section>
-      <section id="CONTACT">CONTACT</section>
+      <section id="CONTACT">
+        <div class="contactSection">
+          <div class="contactInfo">
+            <h1>Contact Me</h1>
+            <p class="email"><i class="fa-solid fa-envelope"></i> nithin@example.com</p>
+            <p class="mobile"><i class="fa-solid fa-phone"></i> +91 9999999999</p>
+            <div class="icons">
+              <a href="#" class="github">
+                <img src="./images/githubLogo.svg" alt="GitHub" class="github"/>
+              </a>
+              <a href="#" class="X">
+                <img src="./images/XLogo.svg" alt="X" class="X" />
+              </a>
+              <a href="#" class="linkedin">
+                <img src="./images/linkedinLogo.svg" alt="LinkedIn" class="linkedin"/>
+              </a>
+            </div>
+            <button class="contactCV">Download CV 
+              <a href="./images/nithinnnnn.pdf" class="resumeLogo" download="Nithin_Kumar_Resume.pdf">
+                <img src="./images/resumeLogo.svg" alt="Resume" class="resumeLogo"/>
+              </a>
+            </button>
+          </div>
+          <div class="contactForm">
+            <form>
+              <input name="name" type="text" placeholder="Your Name" required>
+              <input name="email" type="email" placeholder="Your Email" required>
+              <textarea name="message" rows=6 placeholder="Your Message"></textarea>
+              
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="script.js"></script>

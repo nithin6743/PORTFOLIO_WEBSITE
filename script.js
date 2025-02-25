@@ -54,7 +54,7 @@ document.querySelectorAll(".sidebar a").forEach((link) => {
 //to blur the sections when scrolen through navbar
 window.addEventListener("scroll", function () {
   let sections = document.querySelectorAll("section");
-  let scrollPosition = window.scrollY + window.innerHeight - 200;
+  let scrollPosition = window.scrollY + window.innerHeight - 175;
 
   sections.forEach((section) => {
     let offset = section.offsetTop;
@@ -92,6 +92,19 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".tab-button").classList.add("active");
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
