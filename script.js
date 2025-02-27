@@ -3,18 +3,18 @@ let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav ul a");
 
 // to show hover effect on home link in navbar when the page is loaded
-window.onload = () => {
-  let homeLink = document.querySelector("nav ul a[href='#HOME']");
-  if (homeLink) {
-    homeLink.classList.add("active");
-  }
-};
+// window.onload = () => {
+//   let homeLink = document.querySelector("nav ul a[href='#HOME']");
+//   if (homeLink) {
+//     homeLink.classList.add("active");
+//   }
+// };
 
 window.onscroll = () => {
   let top = window.scrollY;
 
   sections.forEach((sec) => {
-    let offset = sec.offsetTop - 150;
+    let offset = sec.offsetTop - 175;
     let height = sec.offsetHeight;
     let id = sec.getAttribute("id");
 
@@ -93,23 +93,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//projects swiper in projects section
+var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 2.5,
+  loop:true,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 150,
+    modifier:1,
+    slideShadows: false,
+  },
+  autoplay:{
+      delay: 10000,
+      disableOnInteraction: false,
+  }
+});
 

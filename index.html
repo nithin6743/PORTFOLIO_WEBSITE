@@ -7,18 +7,23 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="./images/NK.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
   </head>
   <body>
+    <!-- Background for he web page -->
+
     <video autoplay loop muted playsinline id="backgroundVideo">
-      <source src="./images/background-video.webm" type="video/mp4">
+      <!-- <source src="./images/background-video.webm" type="video/mp4"> -->
     </video>
     
+    <!-- Nav bar -->
+
     <header class="header">
       <a href="#HOME"><img src="images/NK.png" alt="images/NK.png" class="logo"/></a>
       <nav class="navbar">
         <ul class="sidebar">
-          <a onclick="hideSideBar(event)" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF">
+          <a onclick="hideSideBar(event)" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000">
             <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
           <a href="#HOME" class="active">HOME</a>
           <a href="#ABOUT">ABOUT</a>
@@ -30,7 +35,7 @@
           <a class="hideOnMobile" href="#ABOUT">ABOUT</a>
           <a class="hideOnMobile" href="#PROJECTS">PROJECTS</a>
           <a class="hideOnMobile" href="#CONTACT">CONTACT</a>
-          <a class="menu-button" onclick="ShowSideBar(event)" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px viewBox="0 -960 960 960" width="30px" fill="#FFFFFF">
+          <a class="menu-button" onclick="ShowSideBar(event)" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF">
               <path
                 d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
         </ul>
@@ -38,6 +43,8 @@
     </header>
 
     <main class="main">
+      <!-- Home Section -->
+
       <section id="HOME">
         <div class="homeSection">
           <img src="./images/cat.jpg" class="profile" />
@@ -69,12 +76,16 @@
           </div>
         </div>
       </section>
+
+      <!-- About section -->
+
       <section id="ABOUT">
         <div class="tabContainer">
             <div class="tabs">
                 <button class="tab-button active" data-target="skillsContent">SKILLS</button>
                 <button class="tab-button" data-target="educationContent">EDUCATION</button>
                 <button class="tab-button" data-target="acheivementsContent">ACHIEVEMENTS</button> 
+                <button class="tab-button" data-target="ExperienceContent">EXPERIENCE</button> 
             </div>
             <div class="tabContent">
                 <div class="tab-content skillsContent active">
@@ -89,11 +100,56 @@
                     <h2>Achievements</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quas voluptates, minus doloremque commodi aliquid labore mollitia cumque omnis asperiores ipsam dolorum explicabo maiores magni repudiandae, nulla hic? Dolorum, in?</p>
                 </div>
+                <div class="tab-content ExperienceContent"> 
+                  <h2>Experience</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quas voluptates, minus doloremque commodi aliquid labore mollitia cumque omnis asperiores ipsam dolorum explicabo maiores magni repudiandae, nulla hic? Dolorum, in?</p>
+              </div>
             </div>
         </div>
-    </section>
+     </section>
     
-      <section id="PROJECTS">PROJECTS</section>
+     <!-- Projects  -->
+     
+     <section id="PROJECTS">
+       <div class="swiper mySwiper">
+         <div class="swiper-wrapper">
+           <div class="swiper-slide">
+             <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, neque. Sed dicta deleniti cupiditate. Autem dolore veniam quis nihil vel dignissimos sapiente hic placeat id soluta provident, aliquid esse ab.</p>
+             <button class="b1">nithinnnnnnn</button>
+             <button class="b2">nithinnnnnnn</button>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, neque. Sed dicta deleniti cupiditate. Autem dolore veniam quis nihil vel dignissimos sapiente hic placeat id soluta provident, aliquid esse ab.</p>
+              <button class="b1">nithinnnnnnn</button>
+              <button class="b2">nithinnnnnnn</button>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, neque. Sed dicta deleniti cupiditate. Autem dolore veniam quis nihil vel dignissimos sapiente hic placeat id soluta provident, aliquid esse ab.</p>
+              <button class="b1">nithinnnnnnn</button>
+              <button class="b2">nithinnnnnnn</button>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, neque. Sed dicta deleniti cupiditate. Autem dolore veniam quis nihil vel dignissimos sapiente hic placeat id soluta provident, aliquid esse ab.</p>
+              <button class="b1">nithinnnnnnn</button>
+              <button class="b2">nithinnnnnnn</button>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, neque. Sed dicta deleniti cupiditate. Autem dolore veniam quis nihil vel dignissimos sapiente hic placeat id soluta provident, aliquid esse ab.</p>
+              <button class="b1">nithinnnnnnn</button>
+              <button class="b2">nithinnnnnnn</button>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+
       <section id="CONTACT">
         <div class="contactSection">
           <div class="contactInfo">
@@ -130,6 +186,7 @@
       </section>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
