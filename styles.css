@@ -743,7 +743,7 @@ textarea {
 
 }
 /*-----------for mobiles----------*/
-@media (max-width: 1080px) and (max-height: 2400px) {
+@media (max-width: 550px) {
   .hideOnMobile {
     display: none;
   }
