@@ -51,16 +51,24 @@ document.querySelectorAll(".sidebar a").forEach((link) => {
   });
 });
 
-//to blur the sections when scrolen through navbar
-window.addEventListener("scroll", function () {
+// Function to update blur effect based on screen size
+function updateBlurEffect() {
   let sections = document.querySelectorAll("section");
-  let scrollPosition = window.scrollY + window.innerHeight - 175;
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    sections.forEach((section) => {
+      section.classList.remove("faded", "active");
+    });
+    return;
+  }
+
+  let scrollPosition = window.scrollY + window.innerHeight;
+  let blurThreshold = window.matchMedia("(max-width: 1024px)").matches ? 120 : 175;
 
   sections.forEach((section) => {
     let offset = section.offsetTop;
     let height = section.offsetHeight;
 
-    if (scrollPosition > offset && scrollPosition < offset + height) {
+    if (scrollPosition - blurThreshold > offset && scrollPosition - blurThreshold < offset + height) {
       section.classList.add("active");
       section.classList.remove("faded");
     } else {
@@ -68,29 +76,35 @@ window.addEventListener("scroll", function () {
       section.classList.add("faded");
     }
   });
-});
+}
+
+window.addEventListener("scroll", updateBlurEffect);
+window.addEventListener("resize", updateBlurEffect);
+updateBlurEffect();
+window.addEventListener("scroll", updateBlurEffect);
+window.addEventListener("resize", updateBlurEffect);
+updateBlurEffect();
+
 
 //menubar in the about section
 document.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll(".tab-button");
-    const contents = document.querySelectorAll(".tab-content");
+  const buttons = document.querySelectorAll(".tab-button");
+  const contents = document.querySelectorAll(".tab-content");
 
-    buttons.forEach(button => {
-        button.addEventListener("click", () => {
-            buttons.forEach(button => button.classList.remove("active"));
-            contents.forEach(content => content.classList.remove("active"));
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      buttons.forEach((button) => button.classList.remove("active"));
+      contents.forEach((content) => content.classList.remove("active"));
 
-            button.classList.add("active");
-            const targetContent = document.querySelector(`.${button.dataset.target}`);
-            if (targetContent) {
-                targetContent.classList.add("active");
-
-            }
-        });
+      button.classList.add("active");
+      const targetContent = document.querySelector(`.${button.dataset.target}`);
+      if (targetContent) {
+        targetContent.classList.add("active");
+      }
     });
-    document.querySelector(".skillsContent").classList.add("active");
-    document.querySelector(".tab-button").classList.add("active");
-
+  });
+  document.querySelector(".skillsContent").classList.add("active");
+  document.querySelector(".tab-button").classList.add("active");
 });
 
 //projects swiper in projects section
@@ -98,18 +112,40 @@ var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 2.5,
-  loop:true,
+  slidesPerView: 2.3,
+  loop: true,
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
-    depth: 150,
-    modifier:1,
-    slideShadows: false,
+    depth: 1000,
+    modifier: 1,
+    slideShadows: true,
   },
-  autoplay:{
-      delay: 10000,
-      disableOnInteraction: false,
-  }
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  autoplay: {
+    delay: 10000,
+    disableOnInteraction: false,
+  },
 });
 
+//skillstopics accordion in skills section
+let acc = document.querySelectorAll(".accordion");
+acc.forEach((button, index) => {
+  button.addEventListener("click", function () {
+    this.classList.toggle("active");
+    let panel = this.nextElementSibling;
+
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+  if (index === 0) {
+    button.classList.add("active");
+    let panel = button.nextElementSibling;
+    panel.style.maxHeight = panel.scrollHeight + "px";
+  }
+});

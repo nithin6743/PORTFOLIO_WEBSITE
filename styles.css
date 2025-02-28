@@ -28,7 +28,6 @@ body {
   z-index: -1;
 }
 
-
 /*----------NAVBAR STYLING---------- */
 header {
   position: fixed;
@@ -45,14 +44,12 @@ header {
   text-shadow: 0px 0px 20px #000;
 }
 
-
 /*---------logo image----------*/
 .logo {
   height: 40px;
   color: white;
   margin: 7px 0;
 }
-
 
 /*---------nav bar----------*/
 nav ul a {
@@ -64,10 +61,9 @@ nav ul a {
   margin-left: 40px;
 }
 
-.sidebar a{
+.sidebar a {
   color: #000;
 }
-
 
 /*---------navbar hover effect and active effect----------*/
 nav ul a::after {
@@ -93,7 +89,6 @@ nav ul a.active {
   color: #fca311;
 }
 
-
 /* ----------SECTIONS STYLING---------- */
 section {
   min-height: 100vh;
@@ -108,7 +103,7 @@ section {
 }
 
 section.faded {
-  opacity: 0.3;  
+  opacity: 0.3;
   filter: blur(3px);
 }
 
@@ -116,7 +111,6 @@ section.active {
   opacity: 1;
   filter: blur(0);
 }
-
 
 /*----------sidebar styling----------*/
 .sidebar {
@@ -137,23 +131,23 @@ section.active {
 
 .sidebar a {
   width: 100%;
+  margin: 5vh 2vh;
 }
 
 .menu-button {
   display: none;
 }
 
-
 /*----------Home section styling----------*/
-.aboutNithin{
-  font-size: 2rem;
-  font-weight: 700;
+.aboutNithin {
+  font-size: 4vh;
+  font-weight: 500;
   height: auto;
-  width:100%;
+  width: 100%;
   text-shadow: 0px 0px 20px #000, 0px 0px 20px #000;
 }
 
-.profileDetails{
+.profileDetails {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -164,7 +158,7 @@ section.active {
   text-shadow: 0px 0px 20px #000, 0px 0px 20px #000;
 }
 
-.homeSection{
+.homeSection {
   display: flex;
   margin: 10vh;
   padding: 5vh;
@@ -172,13 +166,13 @@ section.active {
   background: rgba(0, 0, 0, 0.8);
 }
 
-.nithinKumar{
+.nithinKumar {
   text-transform: uppercase;
   font-size: 4rem;
   padding-bottom: 2vh;
 }
 
-.profile{
+.profile {
   width: 40%;
   height: 60vh;
   justify-content: left;
@@ -187,18 +181,18 @@ section.active {
   object-fit: cover;
 }
 
-.name{
-  color: #FCA311;
+.name {
+  color: #fca311;
 }
 
-.namePrefix{
+.namePrefix {
   font-size: 3rem;
   text-transform: none;
 }
 
-.icons{
+.icons {
   padding: 2vh 0 0 0;
-  display: flex; 
+  display: flex;
   justify-content: center;
   text-align: center;
   text-shadow: 0px 0px 20px #000, 0px 0px 20px #000;
@@ -207,26 +201,25 @@ section.active {
   transition: all 0.3s ease-in-out;
 }
 
-.icons a:hover{
+.icons a:hover {
   transform: scale(1.2);
 }
 
-.github{
+.github {
   height: 50px;
 }
 
-.resumeLogo{
+.resumeLogo {
   height: 45px;
   justify-content: baseline;
 }
 
-
 /*----------About section styling----------*/
-#ABOUT{
+#ABOUT {
   display: flex;
 }
 
-.tabContainer{
+.tabContainer {
   height: 80vh;
   width: 90%;
   background: rgba(0, 0, 0, 0.85);
@@ -235,9 +228,9 @@ section.active {
   border-radius: 3vh;
 }
 
-.tabs{
+.tabs {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .tabs button {
@@ -254,7 +247,7 @@ section.active {
   border-radius: 1vh;
 }
 
-.tabs button::after{
+.tabs button::after {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -268,13 +261,13 @@ section.active {
 
 .tabs button:hover::after,
 .tabs button.active::after {
-  background-color: #FCA311;
+  background-color: #fca311;
   cursor: pointer;
 }
 
 .tabs button:hover,
 .tabs button.active {
-  background-color: #FCA311;
+  background-color: #fca311;
   cursor: pointer;
 }
 
@@ -287,12 +280,71 @@ section.active {
   display: block;
 }
 
+.accordion {
+  background: none;
+  color: #fca311;
+  border: none;
+  font-size: 4vh;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: left;
+  padding: 10px;
+  width: 100%;
+}
+.accordion:after {
+  font-family: "Font Awesome 6 Free";
+  content: "\f107";
+  font-weight: 900;
+  margin-right: 5px;
+  float: right;
+  transition: transform 0.3s ease-in-out;
+}
+.accordion.active:after {
+  transform: rotate(180deg);
+}
+.panel {
+  max-height: 0;
+  padding-left: 20px;
+  font-size: 3vh;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+button {
+  margin: 1vh;
+}
+
+.skillstopics {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skillstopics p {
+  margin: 2vh;
+  font-weight: 900;
+}
+
+.tab-content p {
+  margin: 5vh 3vh;
+  font-weight: 600;
+}
+
+.tab-content p span {
+  color: #fca311;
+}
+
+.row1, .row2, .row3{
+  display: flex;
+}
 
 /*----------Projects section styling----------*/
+
+#PROJECTS {
+  margin: 20vh 10vh;
+}
 .swiper {
-  margin: 0 10vh;
+  margin: 0 20vh;
   display: flex;
-  overflow: visible ;
+  overflow: visible;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -305,61 +357,71 @@ section.active {
   height: 300px;
 }
 
+.swiper-slide .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.projButtons {
+  display: flex;
+}
 
 .swiper-slide img {
   width: 100%;
-  height: 60vh;
+  height: 70%;
 }
 
 .swiper-slide p {
-  position: absolute;
-    bottom: 58px; 
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 2vh;
-    text-align: center;
-    font-size: 3vh;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 2vh;
+  text-align: center;
+  font-size: 3vh;
 }
 
-.swiper-slide .b1 {
-  position: absolute;
-    bottom: 0px; 
-    left: 0;
-    width: 50%;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fca311;
-    padding: 2vh;
-    text-align: center;
-    font-size: 3vh;
-    border-style: none;
+.swiper-slide a {
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+  width: 50%;
+  font-size: 3.5vh;
+  font-weight: 700;
+  padding: 1vh;
+  background-color: #fca311;
+  color: #fff;
+  border-style: solid;
+  border-width: 1vh;
+  border-color: #fca311;
 }
 
-.swiper-slide .b2 {
-  position: absolute;
-    bottom: 0px; 
-    left: 50%;
-    width: 50%;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fca311;
-    padding: 2vh;
-    text-align: center;
-    font-size: 3vh;
-    border-style: none;
+.swiper-slide a:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-color: #fca311;
 }
 
-.swiper-slide .b1:hover,.b2:hover{
-  cursor:pointer;
-  font-size: 4vh;
-  font-weight: 400;
-  background: rgba(0, 0, 0, 0.5);
+.swiper-pagination {
+  height: 10vh;
+}
+
+.pagination {
+  color: white; /* Text color */
+  background-color: blue; /* Background color */
+}
+
+.swiper-pagination-bullet {
+  background-color: #fca311 !important;
 }
 
 /*----------Contact section styling----------*/
-.contactSection{
+.contactSection {
   display: flex;
-  margin: 10vh;
+  margin: 0vh;
   padding: 5vh;
   border-radius: 3vh;
   background: rgba(0, 0, 0, 0.8);
@@ -372,14 +434,14 @@ section.active {
 }
 
 .contactInfo,
-.contactForm{
+.contactForm {
   display: flex;
   flex-direction: column;
   margin: 5vh 3vh;
 }
 
-.contactCV{
-  background-color: #FCA311;
+.contactCV {
+  background-color: #fca311;
   color: #fff;
   border-style: solid;
   border-width: 1vh;
@@ -395,39 +457,39 @@ section.active {
   transition: all 0.3s ease-in-out;
 }
 
-.contactCV:hover{
+.contactCV:hover {
   cursor: pointer;
   background: rgba(0, 0, 0, 0);
-  border-color: #FCA311;
+  border-color: #fca311;
   border-width: 1vh;
   outline: none;
 }
 
-.contactInfo{
+.contactInfo {
   justify-content: space-between;
 }
 
-.contactInfo h1{
-  color: #FCA311;
+.contactInfo h1 {
+  color: #fca311;
   margin: 1vh;
 }
 
-.contactInfo p{
+.contactInfo p {
   font-size: 3.5vh;
   margin: 1vh;
 }
 
-.contactInfo .icons{
+.contactInfo .icons {
   margin: 1vh;
   transition: all 0.3s ease-in-out;
 }
 
-.contactInfo .icons a:hover{
+.contactInfo .icons a:hover {
   transform: translateY(-5px);
 }
 
-
-.contactForm input,textarea{
+.contactForm input,
+textarea {
   font-size: 2.5vh;
   padding: 2vh;
   width: 100%;
@@ -440,13 +502,13 @@ section.active {
   resize: none;
 }
 
-.contactForm textarea{
+.contactForm textarea {
   width: 100%;
   height: 25vh;
 }
 
-.contactForm button{
-  background-color: #FCA311;
+.contactForm button {
+  background-color: #fca311;
   color: #fff;
   border-style: solid;
   border-width: 1vh;
@@ -462,28 +524,404 @@ section.active {
   transition: all 0.3s ease-in-out;
 }
 
-.contactForm button:hover{
+.contactForm button:hover {
   cursor: pointer;
   background: rgba(0, 0, 0, 0);
-  border-color: #FCA311;
+  border-color: #fca311;
   border-width: 1vh;
   outline: none;
 }
 
-
 /* ----------responsive styling for navbar----------*/
 /*----------for tabs----------*/
-@media (max-width: 800px) {
+@media (max-width: 768px) {
+
   .hideOnMobile {
     display: none;
+  }
+
+  /* --------home section--------- */
+
+  .profileDetails h1 {
+    font-size: 2rem;
   }
   .menu-button {
     display: block;
   }
+  .homeSection {
+    width: 100%;
+    padding: 5px 0 0 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .aboutNithin{
+    font-size: 1.25rem;
+  }
+  .profile {
+    width: 65%;
+    height: 270px;
+  }
+  .profileDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1vh 1vh 3vh;
+  }
+  .sidebar {
+    width: 60%;
+    height: 100%;
+  }
+
+  /* ---------about section-------- */
+
+  #ABOUT{
+    padding: 0 5px;
+    margin: 0;
+    width: 100%;
+  }
+  .tabContainer {
+    display: block;
+    margin: 10px;
+    width: 100%;
+    border-radius: 3vh;
+  }
+  .tab-content p{
+    font-size: 1rem;
+  }
+  .accordion {
+    margin: 0;
+    font-size: 10px;
+    cursor: pointer;
+    text-align: left;
+    width: 60%;
+  }
+  .panel p{
+    font-size: 2.5vh;
+    margin: 4vh 0;
+    font-weight: 800;
+  }
+  .skillstopics {
+    display: flex;
+  }
+
+  .skillstopics button{
+    font-size: 17px;
+  }
+  .tab-content p {
+    padding: 7px 0;
+    margin: 0;
+  }
+  .tab-content p span {
+    color: #fca311;
+  }
+
+  /* ---------projects section-------- */
+  
+  .swiper-slide .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .projButtons {
+    width: 60vh;
+  }
+  .swiper-slide img {
+    width: 60vh;
+    height: 40vh;
+  }
+  .swiper-slide p {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  .card p{
+    width: 60vh;
+  }
+  .swiper-pagination {
+    display: none;
+  }
+
+  /* ---------contact section------- */
+
+  .contactSection {
+    margin: 0;
+    padding: 0;
+    gap: 0;
+  }
+  
+  .contactCV {
+    background-color: #fca311;
+    color: #fff;
+    border-style: solid;
+    border-width: 1vh;
+    border-color: #fca21100;
+    outline: none;
+    font-size: 4vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 1vh 0;
+    border-radius: 2vh;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contactCV:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    border-color: #fca311;
+    border-width: 1vh;
+    outline: none;
+  }
+  
+  .contactInfo {
+    justify-content: space-between;
+  }
+  
+  .contactInfo h1 {
+    color: #fca311;
+    margin: 1vh;
+  }
+  
+  .contactInfo p {
+    font-size: 3.5vh;
+    margin: 0.5vh;
+  }
+  
+  .contactInfo .icons {
+    margin: 1vh;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contactInfo .icons a:hover {
+    transform: translateY(-5px);
+  }
+  
+  .contactForm input,
+  textarea {
+    font-size: 2.5vh;
+    padding: 2vh;
+    width: 100%;
+    margin: 1vh;
+    background: #262626;
+    color: #fff;
+    border: 0;
+    outline: none;
+    border-radius: 1vh;
+    resize: none;
+  }
+  
+  .contactForm textarea {
+    width: 100%;
+    height: 25vh;
+  }
+  
+  .contactForm button {
+    background-color: #fca311;
+    color: #fff;
+    border-style: solid;
+    border-width: 1vh;
+    border-color: #fca21100;
+    outline: none;
+    font-size: 4vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5vh 7vh;
+    border-radius: 2vh;
+    margin: 2vh 1vh;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contactForm button:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    border-color: #fca311;
+    border-width: 1vh;
+    outline: none;
+  }
+
 }
 /*-----------for mobiles----------*/
 @media (max-width: 400px) {
+  .hideOnMobile {
+    display: none;
+  }
+   /* --------home section--------- */
+   header {
+    
+    background: blur(5px);
+  }
+  .profileDetails h1,
+  .namePrefix{
+    font-size: 1.5rem;
+  }
+  
+  .aboutNithin{
+    font-size: 1rem;
+  }
+  .profile {
+    width: 85%;
+    height: 240px;
+  }
+  .homeSection icons {
+    font-size: 1.5rem;
+  }
   .sidebar {
     width: 100%;
+    height: 100%;
   }
+
+  /* ---------about section-------- */
+
+  .tabs button{
+    font-size: 0.7rem;
+    font-weight: 800;
+  }
+  .tabContainer {
+    margin: 0;
+    height: 115vh;
+    width: 100%;
+    border-radius: 3vh;
+  }
+  .tab-content p{
+    font-size: 1rem;
+  }
+  .accordion {
+    margin: 0;
+    font-size: 10px;
+    cursor: pointer;
+    text-align: left;
+    width: 50%;
+  }
+  .panel p{
+    font-size: 2.5vh;
+    font-weight: 800;
+  }
+  .skillstopics {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row1 , .row2, .row3{
+    display: flex;
+    gap: 7vh;
+  }
+  
+
+  .skillstopics button{
+    font-size: 15px;
+  }
+  .tab-content p {
+    margin: 0;
+  }
+  .tab-content p span {
+    color: #fca311;
+  }
+
+  /* ---------projects section-------- */
+  #PROJECTS {
+    margin: 0;
+  }
+  .swiper {
+    margin: 0 10vh;
+    display: flex;
+    overflow: visible;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .swiper-slide {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+  }
+
+  .swiper-slide .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projButtons {
+    display: flex;
+    width: 170%;
+  }
+
+  .swiper-slide img {
+    width: 170%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+  .swiper-slide p {
+    bottom: 30px;
+    left: 0;
+    width: 170%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1.5vh;
+    text-align: center;
+    font-size: 2.5vh;
+  }
+
+  .swiper-slide a {
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    width: 50%;
+    font-size: 3vh;
+    font-weight: 700;
+    padding: 0.8vh;
+    background-color: #fca311;
+    color: #fff;
+    border-style: solid;
+    border-width: 0.8vh;
+    border-color: #fca311;
+  }
+
+  .swiper-slide a:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    border-style: solid;
+    border-color: #fca311;
+  }
+  .pagination {
+    color: white; /* Text color */
+    background-color: blue; /* Background color */
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #fca311 !important;
+  }
+  .swiper-pagination {
+    display: none;
+  }
+  /* ---------contact section------- */
+
+  .contactSection {
+    height: 115vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+  }
+  .contactCV {
+    font-size: 4vh;
+    padding: 1vh 0;
+  }
+  .contactInfo h1 {
+    font-size: 2rem;
+    color: #fca311;
+    margin: 1vh;
+  }
+  .contactInfo p {
+    font-size: 1rem;
+    margin: 0.5vh 0;
+  }
+
+  
 }

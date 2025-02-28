@@ -5,26 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NITHIN KUMAR</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="./images/NK.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
+    <link rel="icon" href="./images/NK.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
     <!-- Background for he web page -->
 
     <video autoplay loop muted playsinline id="backgroundVideo">
-      <!-- <source src="./images/background-video.webm" type="video/mp4"> -->
+      <source src="./images/background-video.webm" type="video/mp4" />
     </video>
-    
+
     <!-- Nav bar -->
 
     <header class="header">
-      <a href="#HOME"><img src="images/NK.png" alt="images/NK.png" class="logo"/></a>
+      <a href="#HOME"
+        ><img src="images/NK.png" alt="images/NK.png" class="logo" />
+      </a>
       <nav class="navbar">
         <ul class="sidebar">
-          <a onclick="hideSideBar(event)" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000">
-            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
+          <a onclick="hideSideBar(event)" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="30px"
+              viewBox="0 -960 960 960"
+              width="30px"
+              fill="#000">
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg>
+          </a>
           <a href="#HOME" class="active">HOME</a>
           <a href="#ABOUT">ABOUT</a>
           <a href="#PROJECTS">PROJECTS</a>
@@ -35,9 +49,17 @@
           <a class="hideOnMobile" href="#ABOUT">ABOUT</a>
           <a class="hideOnMobile" href="#PROJECTS">PROJECTS</a>
           <a class="hideOnMobile" href="#CONTACT">CONTACT</a>
-          <a class="menu-button" onclick="ShowSideBar(event)" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF">
+          <a class="menu-button" onclick="ShowSideBar(event)" href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="30px"
+              viewBox="0 -960 960 960"
+              width="30px"
+              fill="#FFFFFF">
               <path
-                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg>
+          </a>
         </ul>
       </nav>
     </header>
@@ -47,30 +69,49 @@
 
       <section id="HOME">
         <div class="homeSection">
-          <img src="./images/cat.jpg" class="profile" />
+          <img src="./images/profile.jpg" class="profile" />
           <div class="profileDetails">
             <h1 class="nithinKumar">
-              <span class="namePrefix">Hi, I'm </span
-              ><span class="name"> NITHIN Kumar</span>
+              <span class="namePrefix"> I'm </span>
+              <span class="name"> NITHIN Kumar</span>
             </h1>
             <p class="aboutNithin">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-              minima ea libero, quasi neque cum aut ullam sequi ipsum fugiat
-              reiciendis tenetur rem vel et! Animi excepturi quam architecto
-              sapiente.
+              Computer Science and Data Science student with strong
+              problem-solving skills, proficiency in multiple programming
+              languages, and effective communication. Experienced in leadership,
+              event management, and extracurricular activities. Seeking a
+              challenging role to apply technical expertise and drive
+              innovation.
             </p>
             <div class="icons">
-              <a href="#" class="github">
-                <img src="./images/githubLogo.svg" alt="GitHub" class="github"/>
+              <a
+                href="https://github.com/nithin6743"
+                class="github"
+                target="_blank"
+                rel="noopener noreferrer">
+                <img
+                  src="./images/githubLogo.svg"
+                  alt="GitHub"
+                  class="github" />
               </a>
-              <a href="#" class="X">
-                <img src="./images/XLogo.svg" alt="X" class="X" />
+              <a
+                href="https://www.linkedin.com/in/nithin-kumar-snk261004"
+                class="linkedin"
+                target="_blank"
+                rel="noopener noreferrer">
+                <img
+                  src="./images/linkedinLogo.svg"
+                  alt="LinkedIn"
+                  class="linkedin" />
               </a>
-              <a href="#" class="linkedin">
-                <img src="./images/linkedinLogo.svg" alt="LinkedIn" class="linkedin"/>
-              </a>
-              <a href="./images/nithinnnnn.pdf" class="resumeLogo" download="Nithin_Kumar_Resume.pdf">
-                <img src="./images/resumeLogo.svg" alt="Resume" class="resumeLogo"/>
+              <a
+                href="./images/nithinnnnn.pdf"
+                class="resumeLogo"
+                download="Nithin_Kumar_Resume.pdf">
+                <img
+                  src="./images/resumeLogo.svg"
+                  alt="Resume"
+                  class="resumeLogo" />
               </a>
             </div>
           </div>
@@ -81,71 +122,235 @@
 
       <section id="ABOUT">
         <div class="tabContainer">
-            <div class="tabs">
-                <button class="tab-button active" data-target="skillsContent">SKILLS</button>
-                <button class="tab-button" data-target="educationContent">EDUCATION</button>
-                <button class="tab-button" data-target="acheivementsContent">ACHIEVEMENTS</button> 
-                <button class="tab-button" data-target="ExperienceContent">EXPERIENCE</button> 
-            </div>
-            <div class="tabContent">
-                <div class="tab-content skillsContent active">
-                    <h2>Skills</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quas voluptates, minus doloremque commodi aliquid labore mollitia cumque omnis asperiores ipsam dolorum explicabo maiores magni repudiandae, nulla hic? Dolorum, in?</p>
+          <div class="tabs">
+            <button class="tab-button active" data-target="skillsContent">
+              TECH STACK
+            </button>
+            <button class="tab-button" data-target="educationContent">
+              EDUCATION
+            </button>
+            <button class="tab-button" data-target="acheivementsContent">
+              ACHIEVEMENTS
+            </button>
+            <button class="tab-button" data-target="ExperienceContent">
+              EXPERIENCE
+            </button>
+          </div>
+          <div class="tabContent">
+            <div class="tab-content skillsContent active">
+              <div class="skillstopics">
+                <div class="row1">
+                  <div>
+                    <button class="accordion">Languages</button>
+                    <div class="panel">
+                      <p>• C</p>
+                      <p>• C++</p>
+                      <p>• Python</p>
+                      <p>• JavaScript</p>
+                    </div>
+                  </div>
+  
+                  <div>
+                    <button class="accordion">Frontend</button>
+                    <div class="panel">
+                      <p>• HTML</p>
+                      <p>• CSS</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="tab-content educationContent">
-                    <h2>Education</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quas voluptates, minus doloremque commodi aliquid labore mollitia cumque omnis asperiores ipsam dolorum explicabo maiores magni repudiandae, nulla hic? Dolorum, in?</p>
+
+                <div class="row2">
+                  <div>
+                    <button class="accordion">Backend</button>
+                    <div class="panel">
+                      <p>• Node.js</p>
+                    </div>
+                  </div>
+  
+                  <div>
+                    <button class="accordion">Databases</button>
+                    <div class="panel">
+                      <p>• MongoDB</p>
+                      <p>• MySQL</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="tab-content acheivementsContent"> 
-                    <h2>Achievements</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quas voluptates, minus doloremque commodi aliquid labore mollitia cumque omnis asperiores ipsam dolorum explicabo maiores magni repudiandae, nulla hic? Dolorum, in?</p>
+
+                <div class="row3">
+                  <div>
+                    <button class="accordion">Tools</button>
+                    <div class="panel">
+                      <p>• Git</p>
+                      <p>• VS Code</p>
+                      <p>• REST APIs</p>
+                    </div>
+                  </div>
+  
+                  <div>
+                    <button class="accordion">IT Constructs</button>
+                    <div class="panel">
+                      <p>• Data Structures & Algorithms</p>
+                      <p>• Database Management System</p>
+                      <p>• Computer Networks</p>
+                      <p>• Operating System</p>
+                      <p>• OOPS</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="tab-content ExperienceContent"> 
-                  <h2>Experience</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quas voluptates, minus doloremque commodi aliquid labore mollitia cumque omnis asperiores ipsam dolorum explicabo maiores magni repudiandae, nulla hic? Dolorum, in?</p>
               </div>
             </div>
-        </div>
-     </section>
-    
-     <!-- Projects  -->
-     
-     <section id="PROJECTS">
-       <div class="swiper mySwiper">
-         <div class="swiper-wrapper">
-           <div class="swiper-slide">
-             <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, neque. Sed dicta deleniti cupiditate. Autem dolore veniam quis nihil vel dignissimos sapiente hic placeat id soluta provident, aliquid esse ab.</p>
-             <button class="b1">nithinnnnnnn</button>
-             <button class="b2">nithinnnnnnn</button>
+            <div class="tab-content educationContent">
+              <p>
+                • <span>B. Tech in CSE - Data Science </span> | CMR Engineering
+                College | CGPA: 7.56 | 2022 - Present
+              </p>
+              <p>
+                • <span>XII (CBSE) </span> | Bhavan's Sri Ramakrishna Vidyalaya
+                | PCM | 65% | 2022
+              </p>
+              <p>
+                • <span>XI (ICSE) </span> |The Hyderabad Public School | 82% |
+                2020
+              </p>
             </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, neque. Sed dicta deleniti cupiditate. Autem dolore veniam quis nihil vel dignissimos sapiente hic placeat id soluta provident, aliquid esse ab.</p>
-              <button class="b1">nithinnnnnnn</button>
-              <button class="b2">nithinnnnnnn</button>
+            <div class="tab-content acheivementsContent">
+              <p>
+                • Organized <span>“DIGITHON” </span>tech event, coordinating 6
+                sub-events and managing a team of 20 volunteers.
+              </p>
+              <p>
+                • Achieved a certificate in the
+                <span>Internal Smart India Hackathon, </span> leading a team in
+                developing a real-world solution.
+              </p>
+              <p></p>
             </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, neque. Sed dicta deleniti cupiditate. Autem dolore veniam quis nihil vel dignissimos sapiente hic placeat id soluta provident, aliquid esse ab.</p>
-              <button class="b1">nithinnnnnnn</button>
-              <button class="b2">nithinnnnnnn</button>
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, neque. Sed dicta deleniti cupiditate. Autem dolore veniam quis nihil vel dignissimos sapiente hic placeat id soluta provident, aliquid esse ab.</p>
-              <button class="b1">nithinnnnnnn</button>
-              <button class="b2">nithinnnnnnn</button>
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, neque. Sed dicta deleniti cupiditate. Autem dolore veniam quis nihil vel dignissimos sapiente hic placeat id soluta provident, aliquid esse ab.</p>
-              <button class="b1">nithinnnnnnn</button>
-              <button class="b2">nithinnnnnnn</button>
+            <div class="tab-content ExperienceContent">
+              <p>
+                • <span>Data Analytics Virtual Internship </span>| AWS academy |
+                July 2023
+              </p>
+              <p>
+                • <span>Virtual Internship on Multi cloud (Azure & AWS) </span>|
+                V Cube | February 2025
+              </p>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
+      </section>
+
+      <!-- Projects  -->
+
+      <section id="PROJECTS">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./images/WeatherGifAPI.png" />
+                <p>
+                  A web application that fetches real-time weather data and
+                  displays relevant GIFs based on the conditions. Integrates a
+                  weather API and a GIF APIfor a fun and interactive user
+                  experience.
+                </p>
+                <div class="projButtons">
+                  <a
+                    href="https://github.com/nithin6743/Weather-GIF-API-Project.git"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub Repo
+                    <i class="fa-solid fa-arrow-up-right-from-square"> </i>
+                  </a>
+                  <a
+                    href="https://nithin6743.github.io/Weather-GIF-API-Project/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live Link
+                    <i class="fa-solid fa-arrow-up-right-from-square"> </i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./images/CurrencyConverter.png" />
+                <p>
+                  A currency converter that utilizes an external API to fetch
+                  real-time exchange rates. Allows users to convert between
+                  different currencies with up-to-date information.
+                </p>
+                <div class="projButtons">
+                  <a
+                    href="https://github.com/nithin6743/API_Based_Currency_Converter.git"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub Repo
+                    <i class="fa-solid fa-arrow-up-right-from-square"> </i>
+                  </a>
+                  <a
+                    href="https://nithin6743.github.io/API_Based_Currency_Converter/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live Link
+                    <i class="fa-solid fa-arrow-up-right-from-square"> </i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./images/RockPapersScissors.png" />
+                <p>
+                  A simple Rock-Paper-Scissors game where users can play against
+                  the computer. Implemented with JavaScript for interactivity
+                  and logic handling.
+                </p>
+                <div class="projButtons">
+                  <a
+                    href="https://github.com/nithin6743/ROCK-PAPER-SCISSORS.git"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub Repo
+                    <i class="fa-solid fa-arrow-up-right-from-square"> </i>
+                  </a>
+                  <a
+                    href="https://nithin6743.github.io/ROCK-PAPER-SCISSORS/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live Link
+                    <i class="fa-solid fa-arrow-up-right-from-square"> </i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./images/TicTacToe.png" />
+                <p>
+                  A classic Tic-Tac-Toe game built using HTML, CSS, and
+                  JavaScript. Includes player-vs-player
+                </p>
+                <div class="projButtons">
+                  <a
+                    href="https://github.com/nithin6743/TIC-TAC-TOE.git"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub Repo
+                    <i class="fa-solid fa-arrow-up-right-from-square"> </i>
+                  </a>
+                  <a
+                    href="https://nithin6743.github.io/TIC-TAC-TOE/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live Link
+                    <i class="fa-solid fa-arrow-up-right-from-square"> </i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
       </section>
 
       <!-- Contact Section -->
@@ -154,31 +359,58 @@
         <div class="contactSection">
           <div class="contactInfo">
             <h1>Contact Me</h1>
-            <p class="email"><i class="fa-solid fa-envelope"></i> nithin@example.com</p>
-            <p class="mobile"><i class="fa-solid fa-phone"></i> +91 9999999999</p>
+            <p class="email">
+              <i class="fa-solid fa-envelope"> </i>
+              nithinkumarsottagari03@gmail.com
+            </p>
+            <p class="mobile">
+              <i class="fa-solid fa-phone"> </i> +91 9347177263
+            </p>
             <div class="icons">
-              <a href="#" class="github">
-                <img src="./images/githubLogo.svg" alt="GitHub" class="github"/>
+              <a
+                href="https://github.com/nithin6743"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github">
+                <img
+                  src="./images/githubLogo.svg"
+                  alt="GitHub"
+                  class="github" />
               </a>
-              <a href="#" class="X">
-                <img src="./images/XLogo.svg" alt="X" class="X" />
-              </a>
-              <a href="#" class="linkedin">
-                <img src="./images/linkedinLogo.svg" alt="LinkedIn" class="linkedin"/>
+              <a
+                href="https://www.linkedin.com/in/nithin-kumar-snk261004"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="linkedin">
+                <img
+                  src="./images/linkedinLogo.svg"
+                  alt="LinkedIn"
+                  class="linkedin" />
               </a>
             </div>
-            <button class="contactCV">Download CV 
-              <a href="./images/nithinnnnn.pdf" class="resumeLogo" download="Nithin_Kumar_Resume.pdf">
-                <img src="./images/resumeLogo.svg" alt="Resume" class="resumeLogo"/>
+            <button class="contactCV">
+              Download CV
+              <a
+                href="./images/nithinnnnn.pdf"
+                download="Nithin_Kumar_Resume.pdf">
+                <img
+                  src="./images/resumeLogo.svg"
+                  alt="Resume"
+                  class="resumeLogo" />
               </a>
             </button>
           </div>
           <div class="contactForm">
             <form>
-              <input name="name" type="text" placeholder="Your Name" required>
-              <input name="email" type="email" placeholder="Your Email" required>
-              <textarea name="message" rows=6 placeholder="Your Message"></textarea>
-              
+              <input name="name" type="text" placeholder="Your Name" required />
+              <input
+                name="email"
+                type="email"
+                placeholder="Your Email"
+                required />
+              <textarea name="message" rows="6" placeholder="Your Message">
+              </textarea>
+
               <button type="submit">Submit</button>
             </form>
           </div>
@@ -186,7 +418,9 @@
       </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      async></script>
+    <script src="script.js" async></script>
   </body>
 </html>
