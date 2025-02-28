@@ -748,13 +748,13 @@ textarea {
     display: none;
   }
    /* --------home section--------- */
-   header {
-    
-    background: blur(5px);
-  }
+
   .profileDetails h1,
   .namePrefix{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+  }
+  .name{
+    font-size: 3rem;
   }
   
   .aboutNithin{
@@ -829,6 +829,19 @@ textarea {
     overflow: visible;
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+  .swiper {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;       /* Centers vertically */
+    margin: 0 20vh 0 0;            /* Ensures it's centrally aligned */
+    max-width: 100%;           /* Prevents overflow */
+    overflow: hidden;          /* Prevents unwanted scrolling */
+  }
+  
+  .swiper-wrapper {
+    display: flex;
+    justify-content: center;  /* Ensures slides are centered */
   }
 
   .swiper-slide {
