@@ -341,6 +341,10 @@ button {
 #PROJECTS {
   margin: 20vh 10vh;
 }
+#PROJECTS h1{
+  color: #fca311;
+}
+
 .swiper {
   margin: 0 20vh;
   display: flex;
@@ -619,7 +623,21 @@ textarea {
   }
 
   /* ---------projects section-------- */
-  
+  #PROJECTS {
+    background: rgba(0, 0, 0, 0.8);
+    width: 90%;
+    height: 50%;
+    padding: 0 3vh;
+    border-radius: 2vh;
+  }
+  #PROJECTS h1{
+    color: #fca311;
+    font-size: 6vh;
+    margin-right: 0;
+  }
+  .swiper{
+    margin: 0;
+  }
   .swiper-slide .card {
     display: flex;
     flex-direction: column;
@@ -821,7 +839,19 @@ textarea {
 
   /* ---------projects section-------- */
   #PROJECTS {
-    margin: 0;
+    display: block;
+  }
+  #PROJECTS {
+    background: rgba(0, 0, 0, 0);
+    width: 90%;
+    height: 50%;
+    padding: 0 0;
+  }
+  #PROJECTS h1{
+    color: #fca311;
+    font-size: 6vh;
+    margin-right: 0;
+    text-shadow: #000;
   }
   .swiper {
     margin: 0 10vh;
